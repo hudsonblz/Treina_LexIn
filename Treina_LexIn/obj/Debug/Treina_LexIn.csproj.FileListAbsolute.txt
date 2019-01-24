@@ -1,0 +1,15 @@
+C:\Users\Hudson\source\repos\Treina_LexIn\Treina_LexIn\bin\Debug\Treina_LexIn.dll
+C:\Users\Hudson\source\repos\Treina_LexIn\Treina_LexIn\bin\Debug\Treina_LexIn.pdb
+C:\Users\Hudson\source\repos\Treina_LexIn\Treina_LexIn\bin\Debug\Treina_LexIn.dll.manifest
+C:\Users\Hudson\source\repos\Treina_LexIn\Treina_LexIn\bin\Debug\Treina_LexIn.vsto
+C:\Users\Hudson\source\repos\Treina_LexIn\Treina_LexIn\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+C:\Users\Hudson\source\repos\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.csprojAssemblyReference.cache
+C:\Users\Hudson\source\repos\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.Properties.Resources.resources
+C:\Users\Hudson\source\repos\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.Ribbon1.resources
+C:\Users\Hudson\source\repos\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.csproj.GenerateResource.cache
+C:\Users\Hudson\source\repos\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.csproj.CoreCompileInputs.cache
+C:\Users\Hudson\source\repos\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.csproj.CopyComplete
+C:\Users\Hudson\source\repos\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.dll
+C:\Users\Hudson\source\repos\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.pdb
+C:\Users\Hudson\source\repos\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.AddTabela.resources
+C:\Users\Hudson\source\repos\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.Localizar_Substituir.resources
