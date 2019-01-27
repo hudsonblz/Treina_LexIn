@@ -13,6 +13,11 @@ namespace Treina_LexIn
 {
     public partial class Localizar_Substituir : UserControl
     {
+        private int posicaoInicial;
+        private Word.Document doc = Globals.ThisAddIn.Application.ActiveDocument;
+        private Word.Range rng;
+
+        
         public Localizar_Substituir()
         {
             InitializeComponent();
@@ -20,19 +25,40 @@ namespace Treina_LexIn
 
         private void Localizar_Substituir_Load(object sender, EventArgs e)
         {
-
+            
         }
         #region Botões
         private void btnLocalizarProximo_Click(object sender, EventArgs e)
         {
-            Word.Document doc = Globals.ThisAddIn.Application.ActiveDocument;
-            Word.Words palavras = Globals.ThisAddIn.Application.ActiveDocument.Words;
-            for(int i = 0; i < palavras.Count; i++)
+            /* Word.Document doc = Globals.ThisAddIn.Application.ActiveDocument;
+
+             Word.Range rng = doc.Range(Globals.ThisAddIn.Application.Selection.Characters.First.Start);
+
+             rng.Find.ClearFormatting();
+             rng.Find.Forward = true;
+             if (rng.Find.Execute(txbBusca.Text.ToString()))
+             {
+                 rng.Select();
+             }
+             */
+
+
+            //seta parametros da busca
+            rng.Find.ClearFormatting();
+
+            rng.Find.Text = txbBusca.Text;
+            rng.Find.Wrap = Word.WdFindWrap.wdFindAsk;
+            rng.Find.Execute();
+
+            if (rng.Find.Found)
             {
-
+                rng.Select();
+                rng.SetRange(Globals.ThisAddIn.Application.Selection.End, doc.Content.End);
             }
-
-            doc.Range(0,0).Select();
+            else
+            {
+                MessageBox.Show("O texto não foi encontrado");
+            }
         }
 
         private void txbBusca_TextChanged(object sender, EventArgs e)
@@ -40,6 +66,9 @@ namespace Treina_LexIn
             if (!string.IsNullOrEmpty(txbBusca.Text))
             {
                 btnLocalizarProximo.Enabled = true;
+                posicaoInicial = Globals.ThisAddIn.Application.Selection.Start;
+                rng = doc.Content;
+                rng.SetRange(posicaoInicial, doc.Content.End);
             }
             else
             {
@@ -47,5 +76,6 @@ namespace Treina_LexIn
             }
         }
         #endregion
+
     }
 }

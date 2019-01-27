@@ -72,9 +72,9 @@
             this.Controls.Add(this.txbBusca);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLocalizarProximo);
-            this.MinimumSize = new System.Drawing.Size(320, 0);
+            this.MinimumSize = new System.Drawing.Size(400, 0);
             this.Name = "Localizar_Substituir";
-            this.Size = new System.Drawing.Size(320, 125);
+            this.Size = new System.Drawing.Size(400, 125);
             this.Load += new System.EventHandler(this.Localizar_Substituir_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
