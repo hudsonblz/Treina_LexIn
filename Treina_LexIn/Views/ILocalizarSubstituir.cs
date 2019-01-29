@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Treina_LexIn.Views
 {
-    interface ILocalizarSubstituir
+    public interface ILocalizarSubstituir
     {
-
+        string palavraBusca { get; set; }
+        string palavraSubstituir { get; set; }
+        bool caseSensitive { get; set; }
     }
 }

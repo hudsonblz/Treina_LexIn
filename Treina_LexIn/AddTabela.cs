@@ -55,5 +55,9 @@ namespace Treina_LexIn
             this.Close();
         }
 
+        private void AddTabela_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

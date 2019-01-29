@@ -38,7 +38,8 @@ namespace Treina_LexIn
         private void btnAddTabela_Click(object sender, RibbonControlEventArgs e)
         {
             AddTabela formTabela = new AddTabela();
-            formTabela.ShowDialog();           
+            formTabela.ShowDialog();         
+            formTabela.Dispose();
         }
 
         private void btnInverteCase_Click(object sender, RibbonControlEventArgs e)
@@ -50,11 +51,26 @@ namespace Treina_LexIn
         {
             painelLocaliza = new Localizar_Substituir();
             painelLateral = Globals.ThisAddIn.CustomTaskPanes.Add(painelLocaliza, "Localizar e Substituir");
+            painelLateral.Width = 350;
             painelLateral.Visible = true;
         }
+
+        private void btnAdicionarCampo_Click(object sender, RibbonControlEventArgs e)
+        {
+            AdicionarCampo formAddCampo = new AdicionarCampo();
+            formAddCampo.ShowDialog();
+            formAddCampo.Dispose();
+        }
+
+        private void btnAdicionarSpan_Click(object sender, RibbonControlEventArgs e)
+        {
+            AdicionarSpan adicionarSpan = new AdicionarSpan();
+            adicionarSpan.ShowDialog();
+            adicionarSpan.Dispose();
+        }
+
         #endregion
-
-
+        
     }
 }
    

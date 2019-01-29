@@ -139,6 +139,7 @@
             this.MinimizeBox = false;
             this.Name = "AddTabela";
             this.Text = "Adicionar Tabela";
+            this.Load += new System.EventHandler(this.AddTabela_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nupColunas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupLinhas)).EndInit();
             this.ResumeLayout(false);

@@ -41,6 +41,8 @@
             this.btnAddTabela = this.Factory.CreateRibbonButton();
             this.btnInverteCase = this.Factory.CreateRibbonButton();
             this.btdLocalizar_Substituir = this.Factory.CreateRibbonButton();
+            this.btnAdicionarCampo = this.Factory.CreateRibbonButton();
+            this.btnAdicionarSpan = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +61,8 @@
             this.group1.Items.Add(this.btnAddTabela);
             this.group1.Items.Add(this.btnInverteCase);
             this.group1.Items.Add(this.btdLocalizar_Substituir);
+            this.group1.Items.Add(this.btnAdicionarCampo);
+            this.group1.Items.Add(this.btnAdicionarSpan);
             this.group1.Label = "Ferramentas";
             this.group1.Name = "group1";
             // 
@@ -107,6 +111,24 @@
             this.btdLocalizar_Substituir.ShowImage = true;
             this.btdLocalizar_Substituir.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btdLocalizar_Substituir_Click);
             // 
+            // btnAdicionarCampo
+            // 
+            this.btnAdicionarCampo.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.btnAdicionarCampo.Label = "Adicionar Campo";
+            this.btnAdicionarCampo.Name = "btnAdicionarCampo";
+            this.btnAdicionarCampo.OfficeImageId = "FieldInsert";
+            this.btnAdicionarCampo.ShowImage = true;
+            this.btnAdicionarCampo.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnAdicionarCampo_Click);
+            // 
+            // btnAdicionarSpan
+            // 
+            this.btnAdicionarSpan.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.btnAdicionarSpan.Label = "Adicionar Span";
+            this.btnAdicionarSpan.Name = "btnAdicionarSpan";
+            this.btnAdicionarSpan.OfficeImageId = "FieldInsert";
+            this.btnAdicionarSpan.ShowImage = true;
+            this.btnAdicionarSpan.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnAdicionarSpan_Click);
+            // 
             // Ribbon1
             // 
             this.Name = "Ribbon1";
@@ -130,6 +152,8 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnAddTabela;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnInverteCase;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btdLocalizar_Substituir;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnAdicionarCampo;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnAdicionarSpan;
     }
 
     partial class ThisRibbonCollection

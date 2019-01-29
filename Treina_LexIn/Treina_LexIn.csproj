@@ -162,14 +162,29 @@
     <Compile Include="AddTabela.Designer.cs">
       <DependentUpon>AddTabela.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdicionarSpan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarSpan.Designer.cs">
+      <DependentUpon>AdicionarSpan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdicionarCampo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarCampo.Designer.cs">
+      <DependentUpon>AdicionarCampo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Localizar_Substituir.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Localizar_Substituir.Designer.cs">
       <DependentUpon>Localizar_Substituir.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\AdicionarCampoModel.cs" />
     <Compile Include="Models\LocalizarSubstituirModel.cs" />
     <Compile Include="Models\TabelaModel.cs" />
+    <Compile Include="Presenters\AdicionarCampoPresenter.cs" />
+    <Compile Include="Views\IAdicionarCampo.cs" />
     <Compile Include="Presenters\LocalizarSubstituirPresenter.cs" />
     <Compile Include="Presenters\Ribbon1Presenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -179,6 +194,12 @@
     <Compile Include="Views\ITabela.cs" />
     <EmbeddedResource Include="AddTabela.resx">
       <DependentUpon>AddTabela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdicionarSpan.resx">
+      <DependentUpon>AdicionarSpan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdicionarCampo.resx">
+      <DependentUpon>AdicionarCampo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Localizar_Substituir.resx">
       <DependentUpon>Localizar_Substituir.cs</DependentUpon>

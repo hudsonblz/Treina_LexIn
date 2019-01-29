@@ -8,57 +8,78 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Word = Microsoft.Office.Interop.Word;
+using Treina_LexIn.Presenters;
+using Treina_LexIn.Views;
 
 namespace Treina_LexIn
 {
-    public partial class Localizar_Substituir : UserControl
+    public partial class Localizar_Substituir : UserControl, ILocalizarSubstituir
     {
-        private int posicaoInicial;
-        private Word.Document doc = Globals.ThisAddIn.Application.ActiveDocument;
-        private Word.Range rng;
-
-        
         public Localizar_Substituir()
         {
             InitializeComponent();
         }
 
-        private void Localizar_Substituir_Load(object sender, EventArgs e)
+        bool ILocalizarSubstituir.caseSensitive
         {
-            
+            get
+            {
+                return chbCaseSensitive.Checked;
+            }
+
+            set
+            {
+                chbCaseSensitive.Checked = value;
+            }
         }
-        #region Botões
+        string ILocalizarSubstituir.palavraBusca
+        {
+            get
+            {
+                return txbBusca.Text;
+            }
+
+            set
+            {
+                txbBusca.Text = value;
+            }
+        }
+        string ILocalizarSubstituir.palavraSubstituir
+        {
+            get
+            {
+                return txbSubstituicao.Text;
+            }
+
+            set
+            {
+                txbSubstituicao.Text = value;
+            }
+        }
+
+        #region Controles
         private void btnLocalizarProximo_Click(object sender, EventArgs e)
         {
-            /* Word.Document doc = Globals.ThisAddIn.Application.ActiveDocument;
+            LocalizarSubstituirPresenter localizarSubstituir = new LocalizarSubstituirPresenter(this);
+            localizarSubstituir.LocalizarProxima();
 
-             Word.Range rng = doc.Range(Globals.ThisAddIn.Application.Selection.Characters.First.Start);
+        }
 
-             rng.Find.ClearFormatting();
-             rng.Find.Forward = true;
-             if (rng.Find.Execute(txbBusca.Text.ToString()))
-             {
-                 rng.Select();
-             }
-             */
+        private void btnSubstituir_Click(object sender, EventArgs e)
+        {
+            LocalizarSubstituirPresenter localizarSubstituir = new LocalizarSubstituirPresenter(this);
+            localizarSubstituir.Substituir();
+        }
 
+        private void btnSubstituirTodos_Click(object sender, EventArgs e)
+        {
+            LocalizarSubstituirPresenter localizarSubstituir = new LocalizarSubstituirPresenter(this);
+            localizarSubstituir.SubstituirTodos();
+        }
 
-            //seta parametros da busca
-            rng.Find.ClearFormatting();
+        private void Localizar_Substituir_Load(object sender, EventArgs e)
+        {
 
-            rng.Find.Text = txbBusca.Text;
-            rng.Find.Wrap = Word.WdFindWrap.wdFindAsk;
-            rng.Find.Execute();
-
-            if (rng.Find.Found)
-            {
-                rng.Select();
-                rng.SetRange(Globals.ThisAddIn.Application.Selection.End, doc.Content.End);
-            }
-            else
-            {
-                MessageBox.Show("O texto não foi encontrado");
-            }
         }
 
         private void txbBusca_TextChanged(object sender, EventArgs e)
@@ -66,16 +87,26 @@ namespace Treina_LexIn
             if (!string.IsNullOrEmpty(txbBusca.Text))
             {
                 btnLocalizarProximo.Enabled = true;
-                posicaoInicial = Globals.ThisAddIn.Application.Selection.Start;
-                rng = doc.Content;
-                rng.SetRange(posicaoInicial, doc.Content.End);
             }
             else
             {
                 btnLocalizarProximo.Enabled = false;
             }
         }
-        #endregion
 
+        private void txbSubstituicao_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txbSubstituicao.Text))
+            {
+                btnSubstituir.Enabled = true;
+                btnSubstituirTodos.Enabled = true;
+            }
+            else
+            {
+                btnSubstituir.Enabled = false;
+                btnSubstituirTodos.Enabled = false;
+            }
+        }
+        #endregion
     }
 }
