@@ -43,6 +43,7 @@
             this.btdLocalizar_Substituir = this.Factory.CreateRibbonButton();
             this.btnAdicionarCampo = this.Factory.CreateRibbonButton();
             this.btnAdicionarSpan = this.Factory.CreateRibbonButton();
+            this.btnQualificacao = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +64,7 @@
             this.group1.Items.Add(this.btdLocalizar_Substituir);
             this.group1.Items.Add(this.btnAdicionarCampo);
             this.group1.Items.Add(this.btnAdicionarSpan);
+            this.group1.Items.Add(this.btnQualificacao);
             this.group1.Label = "Ferramentas";
             this.group1.Name = "group1";
             // 
@@ -129,6 +131,15 @@
             this.btnAdicionarSpan.ShowImage = true;
             this.btnAdicionarSpan.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnAdicionarSpan_Click);
             // 
+            // btnQualificacao
+            // 
+            this.btnQualificacao.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.btnQualificacao.Label = "Qualificação PJ";
+            this.btnQualificacao.Name = "btnQualificacao";
+            this.btnQualificacao.OfficeImageId = "BusinessCardInsertMenu";
+            this.btnQualificacao.ShowImage = true;
+            this.btnQualificacao.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnQualificacao_Click);
+            // 
             // Ribbon1
             // 
             this.Name = "Ribbon1";
@@ -154,6 +165,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btdLocalizar_Substituir;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnAdicionarCampo;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnAdicionarSpan;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnQualificacao;
     }
 
     partial class ThisRibbonCollection

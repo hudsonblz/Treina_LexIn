@@ -30,3 +30,4 @@ C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn
 C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.pdb
 C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.AdicionarCampo.resources
 C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.AdicionarSpan.resources
+C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.Contato.resources

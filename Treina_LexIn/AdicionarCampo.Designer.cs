@@ -35,7 +35,7 @@
             // 
             // btnAdicionarCampo
             // 
-            this.btnAdicionarCampo.Location = new System.Drawing.Point(142, 38);
+            this.btnAdicionarCampo.Location = new System.Drawing.Point(142, 54);
             this.btnAdicionarCampo.Name = "btnAdicionarCampo";
             this.btnAdicionarCampo.Size = new System.Drawing.Size(106, 23);
             this.btnAdicionarCampo.TabIndex = 1;

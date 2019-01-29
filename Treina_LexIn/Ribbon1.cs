@@ -70,7 +70,13 @@ namespace Treina_LexIn
         }
 
         #endregion
-        
+
+        private void btnQualificacao_Click(object sender, RibbonControlEventArgs e)
+        {
+            Contato contatoForm = new Contato();
+            contatoForm.ShowDialog();
+            contatoForm.Dispose();
+        }
     }
 }
    
