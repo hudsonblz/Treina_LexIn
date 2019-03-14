@@ -40,7 +40,7 @@
             this.btnAddImagem = this.Factory.CreateRibbonButton();
             this.btnAddTabela = this.Factory.CreateRibbonButton();
             this.btnInverteCase = this.Factory.CreateRibbonButton();
-            this.btdLocalizar_Substituir = this.Factory.CreateRibbonButton();
+            this.btnLocalizar_Substituir = this.Factory.CreateRibbonButton();
             this.btnAdicionarCampo = this.Factory.CreateRibbonButton();
             this.btnAdicionarSpan = this.Factory.CreateRibbonButton();
             this.btnQualificacao = this.Factory.CreateRibbonButton();
@@ -61,7 +61,7 @@
             this.group1.Items.Add(this.btnAddImagem);
             this.group1.Items.Add(this.btnAddTabela);
             this.group1.Items.Add(this.btnInverteCase);
-            this.group1.Items.Add(this.btdLocalizar_Substituir);
+            this.group1.Items.Add(this.btnLocalizar_Substituir);
             this.group1.Items.Add(this.btnAdicionarCampo);
             this.group1.Items.Add(this.btnAdicionarSpan);
             this.group1.Items.Add(this.btnQualificacao);
@@ -104,14 +104,14 @@
             this.btnInverteCase.ShowImage = true;
             this.btnInverteCase.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnInverteCase_Click);
             // 
-            // btdLocalizar_Substituir
+            // btnLocalizar_Substituir
             // 
-            this.btdLocalizar_Substituir.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.btdLocalizar_Substituir.Label = "Localizar e Substituir";
-            this.btdLocalizar_Substituir.Name = "btdLocalizar_Substituir";
-            this.btdLocalizar_Substituir.OfficeImageId = "ReplaceDialog";
-            this.btdLocalizar_Substituir.ShowImage = true;
-            this.btdLocalizar_Substituir.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btdLocalizar_Substituir_Click);
+            this.btnLocalizar_Substituir.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.btnLocalizar_Substituir.Label = "Localizar e Substituir";
+            this.btnLocalizar_Substituir.Name = "btnLocalizar_Substituir";
+            this.btnLocalizar_Substituir.OfficeImageId = "ReplaceDialog";
+            this.btnLocalizar_Substituir.ShowImage = true;
+            this.btnLocalizar_Substituir.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnLocalizar_Substituir_Click);
             // 
             // btnAdicionarCampo
             // 
@@ -162,7 +162,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnAddImagem;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnAddTabela;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnInverteCase;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton btdLocalizar_Substituir;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnLocalizar_Substituir;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnAdicionarCampo;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnAdicionarSpan;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnQualificacao;

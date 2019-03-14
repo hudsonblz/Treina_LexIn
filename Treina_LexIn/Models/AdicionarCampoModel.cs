@@ -31,7 +31,8 @@ namespace Treina_LexIn.Models
 
         public void AdicionarSpan()
         {
-            range.Select();
+            range.SetRange(Globals.ThisAddIn.Application.Selection.Start, Globals.ThisAddIn.Application.Selection.End);
+            string spanContent = range.Text;
             range.Text = textoCampo;
                         
             range.InsertBefore("[");
@@ -40,6 +41,10 @@ namespace Treina_LexIn.Models
             range.SetRange(range.Start + 1, range.End - 1);
             range.Select();
             range.Font.Subscript = 1;
+            range.SetRange(range.End, range.End);
+            range.Text = spanContent;
+            range.Select();
+            range.Font.Subscript = 0;
         }
     }
 }

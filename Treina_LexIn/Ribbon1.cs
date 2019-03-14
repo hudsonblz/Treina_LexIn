@@ -9,18 +9,27 @@ using System.Windows.Forms;
 using System.Reflection;
 using System.ComponentModel;
 using Treina_LexIn.Presenters;
+using Treina_LexIn.Properties;
 
 namespace Treina_LexIn
 {
     public partial class Ribbon1
     {
         private Ribbon1Presenter ribbonPresenter = Ribbon1Presenter.Instance;
-        private Localizar_Substituir painelLocaliza;
+        private LocalizarSubstituir painelLocaliza;
         private Microsoft.Office.Tools.CustomTaskPane painelLateral;
 
         private void Ribbon1_Load(object sender, RibbonUIEventArgs e)
         {
-
+            btnSaveAsPdf.Label = Locale_PT_br.Ribbon_btnSaveAsPdf;
+            btnAddImagem.Label = Locale_PT_br.Ribbon_btnAddImagem;
+            btnAddTabela.Label = Locale_PT_br.Ribbon_btnAddTabela;
+            btnInverteCase.Label = Locale_PT_br.Ribbon_btnInverteCase;
+            btnLocalizar_Substituir.Label = Locale_PT_br.Ribbon_btnLocalizar_Substituir;
+            btnAdicionarCampo.Label = Locale_PT_br.Ribbon_btnAdicionarCampo;
+            btnAdicionarSpan.Label = Locale_PT_br.Ribbon_btnAdicionarSpan;
+            btnQualificacao.Label = Locale_PT_br.Ribbon_btnQualificacao;
+            group1.Label = Locale_PT_br.Ribbon_nomeGrupo;
         }
 
         #region Botões
@@ -47,12 +56,10 @@ namespace Treina_LexIn
             ribbonPresenter.InverterCase();
         }
 
-        private void btdLocalizar_Substituir_Click(object sender, RibbonControlEventArgs e)
+        private void btnLocalizar_Substituir_Click(object sender, RibbonControlEventArgs e)
         {
-            painelLocaliza = new Localizar_Substituir();
-            painelLateral = Globals.ThisAddIn.CustomTaskPanes.Add(painelLocaliza, "Localizar e Substituir");
-            painelLateral.Width = 350;
-            painelLateral.Visible = true;
+            LocalizarSubstituir localizar_Substituir = new LocalizarSubstituir();
+            localizar_Substituir.ShowDialog();
         }
 
         private void btnAdicionarCampo_Click(object sender, RibbonControlEventArgs e)
@@ -69,14 +76,14 @@ namespace Treina_LexIn
             adicionarSpan.Dispose();
         }
 
-        #endregion
-
         private void btnQualificacao_Click(object sender, RibbonControlEventArgs e)
         {
             Contato contatoForm = new Contato();
             contatoForm.ShowDialog();
             contatoForm.Dispose();
         }
+
+        #endregion
     }
 }
    

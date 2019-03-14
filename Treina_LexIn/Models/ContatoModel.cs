@@ -13,7 +13,6 @@ namespace Treina_LexIn.Models
     {
         public string nomeContatoPJ { get; set; }
         public string representantePF { get; set; }
-        public int numRepresentante { get; set; }
 
         private Word.Document documentoAtual = Globals.ThisAddIn.Application.ActiveDocument;
         private object missingValue = Missing.Value;
@@ -36,7 +35,7 @@ namespace Treina_LexIn.Models
         private void InserirContatoPF()
         {
             InserirTexto("[");
-            InserirSubscrito("repetir 1 Ate " + numRepresentante.ToString() + " pontuacao "+aspas+"; |; e |."+aspas);
+            InserirSubscrito("repetir 1 Ate numRep pontuacao "+aspas+"; |; e |."+aspas);
             InserirTextoNegrito("{"+representantePF+".Nome Formatar "+aspas+"caixaalta"+aspas+"}");
             InserirTexto(", {" + representantePF + ".Nacionalidade}, {"+representantePF+ ".EstadoCivil}, {"+representantePF+ ".Profissao}, portador[");
             InserirSubscrito(representantePF + ".Sexo = " + aspas + "feminino" + aspas);

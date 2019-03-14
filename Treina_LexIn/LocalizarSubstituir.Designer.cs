@@ -1,6 +1,6 @@
 ﻿namespace Treina_LexIn
 {
-    partial class Localizar_Substituir
+    partial class LocalizarSubstituir
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -121,12 +121,7 @@
             // 
             // Localizar_Substituir
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(328, 200);
             this.Controls.Add(this.btnSubstituirTodos);
             this.Controls.Add(this.btnSubstituir);
             this.Controls.Add(this.txbSubstituicao);
@@ -135,10 +130,8 @@
             this.Controls.Add(this.txbBusca);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLocalizarProximo);
-            this.MinimumSize = new System.Drawing.Size(320, 2);
             this.Name = "Localizar_Substituir";
-            this.Padding = new System.Windows.Forms.Padding(5, 10, 10, 5);
-            this.Size = new System.Drawing.Size(344, 215);
+            this.Load += new System.EventHandler(this.Localizar_Substituir_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,0 +1,11 @@
+C:\Users\hudso\Documents\GitHub\WinFormsMvpExample\MvpFramework\WinFormsMvp\bin\Debug\WinFormsMvp.dll
+C:\Users\hudso\Documents\GitHub\WinFormsMvpExample\MvpFramework\WinFormsMvp\bin\Debug\WinFormsMvp.pdb
+C:\Users\hudso\Documents\GitHub\WinFormsMvpExample\MvpFramework\WinFormsMvp\obj\Debug\WinFormsMvp.csproj.CoreCompileInputs.cache
+C:\Users\hudso\Documents\GitHub\WinFormsMvpExample\MvpFramework\WinFormsMvp\obj\Debug\WinFormsMvp.dll
+C:\Users\hudso\Documents\GitHub\WinFormsMvpExample\MvpFramework\WinFormsMvp\obj\Debug\WinFormsMvp.pdb
+C:\Users\hudso\Documents\GitHub\WinFormsMvpExample\MvpFramework\WinFormsMvp\obj\Debug\WinFormsMvp.csprojAssemblyReference.cache
+C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\WinFormsMvp\bin\Debug\WinFormsMvp.dll
+C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\WinFormsMvp\bin\Debug\WinFormsMvp.pdb
+C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\WinFormsMvp\obj\Debug\WinFormsMvp.csproj.CoreCompileInputs.cache
+C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\WinFormsMvp\obj\Debug\WinFormsMvp.dll
+C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\WinFormsMvp\obj\Debug\WinFormsMvp.pdb

@@ -33,9 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txbNomePJ = new System.Windows.Forms.TextBox();
             this.txbNomePF = new System.Windows.Forms.TextBox();
-            this.nupRepresentantes = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.nupRepresentantes)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOk
@@ -80,44 +77,11 @@
             this.txbNomePF.Size = new System.Drawing.Size(143, 20);
             this.txbNomePF.TabIndex = 4;
             // 
-            // nupRepresentantes
-            // 
-            this.nupRepresentantes.Location = new System.Drawing.Point(167, 114);
-            this.nupRepresentantes.Maximum = new decimal(new int[] {
-            30,
-            0,
-            0,
-            0});
-            this.nupRepresentantes.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nupRepresentantes.Name = "nupRepresentantes";
-            this.nupRepresentantes.Size = new System.Drawing.Size(120, 20);
-            this.nupRepresentantes.TabIndex = 5;
-            this.nupRepresentantes.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 116);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Numero de Representantes:";
-            // 
             // Contato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(417, 166);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.nupRepresentantes);
             this.Controls.Add(this.txbNomePF);
             this.Controls.Add(this.txbNomePJ);
             this.Controls.Add(this.label2);
@@ -126,7 +90,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Contato";
             this.Text = "Qualificação PJ";
-            ((System.ComponentModel.ISupportInitialize)(this.nupRepresentantes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,7 +102,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbNomePJ;
         private System.Windows.Forms.TextBox txbNomePF;
-        private System.Windows.Forms.NumericUpDown nupRepresentantes;
-        private System.Windows.Forms.Label label3;
     }
 }

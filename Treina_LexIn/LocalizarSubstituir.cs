@@ -8,19 +8,48 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Word = Microsoft.Office.Interop.Word;
-using Treina_LexIn.Presenters;
+using Treina_LexIn.Models;
+using Treina_LexIn.Services;
 using Treina_LexIn.Views;
+using WinFormsMvp.Forms;
 
 namespace Treina_LexIn
 {
-    public partial class Localizar_Substituir : UserControl, ILocalizarSubstituir
+    public partial class LocalizarSubstituir : MvpForm, ILocalizarSubstituir
     {
-        public Localizar_Substituir()
+
+        public LocalizarSubstituir()
         {
             InitializeComponent();
         }
 
-        bool ILocalizarSubstituir.caseSensitive
+        public event EventHandler ViewLoading;
+        public event EventHandler LocalizarProxima;
+        public event EventHandler SubstituirTodos;
+        public event EventHandler Substituir;
+        public event EventHandler OnInit;
+
+
+        protected override void OnLoad(EventArgs e)
+        {
+            try
+            {
+                OnViewLoding();
+                base.OnLoad(e);
+            }
+            catch(Exception Ex)
+            {
+                string a = Ex.Message;
+                string b = Ex.StackTrace;
+            }
+        }
+
+        protected virtual void OnViewLoding()
+        {
+            ViewLoading?.Invoke(this, EventArgs.Empty);
+        }
+
+        public bool caseSensitive
         {
             get
             {
@@ -32,7 +61,7 @@ namespace Treina_LexIn
                 chbCaseSensitive.Checked = value;
             }
         }
-        string ILocalizarSubstituir.palavraBusca
+        public string palavraBusca
         {
             get
             {
@@ -44,7 +73,7 @@ namespace Treina_LexIn
                 txbBusca.Text = value;
             }
         }
-        string ILocalizarSubstituir.palavraSubstituir
+        public string palavraSubstituir
         {
             get
             {
@@ -56,32 +85,23 @@ namespace Treina_LexIn
                 txbSubstituicao.Text = value;
             }
         }
-
+        public void ConfirmLoaded()
+        {
+        }
         #region Controles
         private void btnLocalizarProximo_Click(object sender, EventArgs e)
         {
-            LocalizarSubstituirPresenter localizarSubstituir = new LocalizarSubstituirPresenter(this);
-            localizarSubstituir.LocalizarProxima();
-
+            LocalizarProxima(sender, e);
         }
-
         private void btnSubstituir_Click(object sender, EventArgs e)
         {
-            LocalizarSubstituirPresenter localizarSubstituir = new LocalizarSubstituirPresenter(this);
-            localizarSubstituir.Substituir();
+            Substituir(sender, e);
         }
-
         private void btnSubstituirTodos_Click(object sender, EventArgs e)
         {
-            LocalizarSubstituirPresenter localizarSubstituir = new LocalizarSubstituirPresenter(this);
-            localizarSubstituir.SubstituirTodos();
+            SubstituirTodos(sender, e);
         }
-
-        private void Localizar_Substituir_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void txbBusca_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txbBusca.Text))
@@ -93,7 +113,6 @@ namespace Treina_LexIn
                 btnLocalizarProximo.Enabled = false;
             }
         }
-
         private void txbSubstituicao_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txbSubstituicao.Text))
@@ -106,6 +125,22 @@ namespace Treina_LexIn
                 btnSubstituir.Enabled = false;
                 btnSubstituirTodos.Enabled = false;
             }
+        }
+
+        public void BindAttribute(string type, string attribute, object model)
+        {
+            if (model != null)
+            {
+                this.txbBusca.DataBindings.Add(type, model, attribute, false, DataSourceUpdateMode.OnPropertyChanged);
+                this.txbSubstituicao.DataBindings.Add(type, model, attribute, false, DataSourceUpdateMode.OnPropertyChanged);
+                this.chbCaseSensitive.DataBindings.Add(type, model, attribute, false, DataSourceUpdateMode.OnPropertyChanged);
+            }
+        }
+
+
+        private void Localizar_Substituir_Load(object sender, EventArgs e)
+        {
+            OnInit(null, EventArgs.Empty);
         }
         #endregion
     }

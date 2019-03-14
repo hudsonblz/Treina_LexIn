@@ -10,6 +10,5 @@ namespace Treina_LexIn.Views
     {
         string nomeContatoPJ { get; set; }
         string representantePF { get; set; }
-        int numRepresentante { get; set; }
     }
 }

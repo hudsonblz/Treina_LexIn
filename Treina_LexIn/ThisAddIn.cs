@@ -6,14 +6,26 @@ using System.Xml.Linq;
 using Word = Microsoft.Office.Interop.Word;
 using Office = Microsoft.Office.Core;
 using Microsoft.Office.Tools.Word;
+using WinFormsMvp.Unity;
+using WinFormsMvp.Binder;
+using Microsoft.Practices.Unity;
 
 namespace Treina_LexIn
 {
     public partial class ThisAddIn
     {
+        private static IUnityContainer unityContainer;
+        public IUnityContainer UnityContainer
+        {
+            get
+            {
+                return unityContainer;
+            }
+        }
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
-            
+            unityContainer = new UnityContainer();
+            PresenterBinder.Factory = new UnityPresenterFactory(unityContainer);
         }
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)

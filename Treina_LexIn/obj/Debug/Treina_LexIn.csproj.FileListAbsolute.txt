@@ -20,7 +20,6 @@ C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\bin\Debug\Treina_LexIn
 C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
 C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.csprojAssemblyReference.cache
 C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.AddTabela.resources
-C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.Localizar_Substituir.resources
 C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.Properties.Resources.resources
 C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.Ribbon1.resources
 C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.csproj.GenerateResource.cache
@@ -31,3 +30,16 @@ C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn
 C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.AdicionarCampo.resources
 C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.AdicionarSpan.resources
 C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.Contato.resources
+C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.Properties.Locale_PT_br.resources
+C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\bin\Debug\Treina_LexIn.dll.config
+C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\bin\Debug\WinFormsMvp.dll
+C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\bin\Debug\WinFormsMvp.Unity.dll
+C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\bin\Debug\WinFormsMvp.pdb
+C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\bin\Debug\WinFormsMvp.Unity.pdb
+C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\bin\Debug\WinFormsMvp.Unity.dll.config
+C:\Users\hudso\Documents\GitHub\Treina_LexIn\Treina_LexIn\obj\Debug\Treina_LexIn.LocalizarSubstituir.resources

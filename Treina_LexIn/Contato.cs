@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Treina_LexIn.Views;
 using Treina_LexIn.Presenters;
+using WinFormsMvp.Forms;
 
 namespace Treina_LexIn
 {
-    public partial class Contato : Form, IContato
+    public partial class Contato : MvpForm, IContato
     {
         string IContato.nomeContatoPJ
         {
@@ -36,17 +37,6 @@ namespace Treina_LexIn
                 txbNomePF.Text = value;
             }
         }
-        int IContato.numRepresentante
-        {
-            get
-            {
-                return int.Parse(nupRepresentantes.Value.ToString());
-            }
-            set
-            {
-                nupRepresentantes.Value = value;
-            }
-        }
 
         public Contato()
         {
@@ -55,7 +45,7 @@ namespace Treina_LexIn
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            ContatoPresenter contatoPresenter = new ContatoPresenter(this);
+             ContatoPresenter contatoPresenter = new ContatoPresenter(this);
             contatoPresenter.InserirQualificacaoPJ();
             this.Close();
         }

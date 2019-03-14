@@ -100,6 +100,10 @@
   -->
   <ItemGroup>
     <Reference Include="Accessibility" />
+    <Reference Include="Microsoft.Practices.Unity, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>WinFormsMvp.Unity\bin\Debug\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -180,18 +184,26 @@
     <Compile Include="Contato.Designer.cs">
       <DependentUpon>Contato.cs</DependentUpon>
     </Compile>
-    <Compile Include="Localizar_Substituir.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="LocalizarSubstituir.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Localizar_Substituir.Designer.cs">
-      <DependentUpon>Localizar_Substituir.cs</DependentUpon>
+    <Compile Include="LocalizarSubstituir.Designer.cs">
+      <DependentUpon>LocalizarSubstituir.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\AdicionarCampoModel.cs" />
+    <Compile Include="Models\Globals.cs" />
     <Compile Include="Models\LocalizarSubstituirModel.cs" />
     <Compile Include="Models\ContatoModel.cs" />
     <Compile Include="Models\TabelaModel.cs" />
     <Compile Include="Presenters\AdicionarCampoPresenter.cs" />
     <Compile Include="Presenters\ContatoPresenter.cs" />
+    <Compile Include="Properties\Locale_PT_br1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Locale_PT_br.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ILocalizarSubstituirService.cs" />
+    <Compile Include="Services\LocalizarSubstituirService.cs" />
     <Compile Include="Views\IAdicionarCampo.cs" />
     <Compile Include="Presenters\LocalizarSubstituirPresenter.cs" />
     <Compile Include="Presenters\Ribbon1Presenter.cs" />
@@ -213,8 +225,12 @@
     <EmbeddedResource Include="Contato.resx">
       <DependentUpon>Contato.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Localizar_Substituir.resx">
-      <DependentUpon>Localizar_Substituir.cs</DependentUpon>
+    <EmbeddedResource Include="LocalizarSubstituir.resx">
+      <DependentUpon>LocalizarSubstituir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Locale_PT_br.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Locale_PT_br1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -228,6 +244,7 @@
     <EmbeddedResource Include="Ribbon1.resx">
       <DependentUpon>Ribbon1.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -253,6 +270,16 @@
     </Compile>
     <AppDesigner Include="Properties\" />
     <None Include="Treina_LexIn_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\WinformsMVP\Src\WinFormsMvp.Unity\WinFormsMvp.Unity.csproj">
+      <Project>{d3e48a8f-dbe7-4f8f-a20a-b00ddb078b61}</Project>
+      <Name>WinFormsMvp.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WinformsMVP\Src\WinFormsMvp\WinFormsMvp.csproj">
+      <Project>{f211df11-2b89-4ffc-a9b8-4ba9cdf41a9f}</Project>
+      <Name>WinFormsMvp</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -22,7 +22,6 @@ namespace Treina_LexIn.Presenters
         {
             contato.nomeContatoPJ = contatoView.nomeContatoPJ;
             contato.representantePF = contatoView.representantePF;
-            contato.numRepresentante = contatoView.numRepresentante;
             contato.InserirQualificacaoPJ();
         }        
     }
